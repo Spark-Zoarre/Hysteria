@@ -20,7 +20,6 @@ exports.create = function () {
 
 exports.launch = function () {
     app.use(express.static(__dirname + '/public'));
-    app.use(express.static(__dirname + '/spark/spark_src'));
 
     app.get("/", function (req, res) {
         res.sendFile(__dirname + '/public/index.html');
